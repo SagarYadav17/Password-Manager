@@ -3,8 +3,6 @@ import json
 
 
 def main():
-    menu.clearScreen()
-
     responce = input(
         'Enter 1: Create new password\nEnter 2: Search for username & password\nEnter any other to quit\n\n-> ')
 
@@ -51,7 +49,10 @@ def main():
         site_name = str(input('Enter Site Name: '))
         menu.decryptPassword(site_name)
 
+        main()
+
     else:
+        menu.clearScreen()
         print('Bye Bye!')
         exit()
 
